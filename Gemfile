@@ -4,10 +4,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-
+# gem 'devise', '~> 3.5', '>= 3.5.3'
 
 gem "rails", "~> 7.0.3"
+gem 'bootstrap-sass',       '3.4.1'
+gem 'autoprefixer-rails'
 
+gem 'bcrypt', '3.1.13'
+gem 'bcrypt-ruby', '~> 3.1.2'
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'coffee-script-source', '1.11.1'
+gem 'execjs'
+
+gem 'pry'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
