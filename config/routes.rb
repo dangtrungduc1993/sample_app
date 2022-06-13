@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   resources :admins
   resources :users
+  resources :account_activations, only: [:edit]
   
   root 'static_pages#home'
   get 'help'    =>  'static_pages#help'
@@ -13,12 +14,15 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # root 'application#hello'
-  # get  'static_pages/home', to: "static_pages#hi"   
-  # get  'static_pages/help'   
+
+  resources :users do
+    member do
+    get :following, :followers
+    end
+    end
+  
+  resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   
 end

@@ -7,14 +7,19 @@ ruby "3.1.2"
 # gem 'devise', '~> 3.5', '>= 3.5.3'
 
 gem "rails", "~> 7.0.3"
-gem 'bootstrap-sass',       '3.4.1'
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'active_storage_validations'
+gem 'image_processing'
+gem 'mini_magick'
 
 gem 'bcrypt', '3.1.13'
 gem 'bcrypt-ruby', '~> 3.1.2'
-# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'coffee-script-source', '1.11.1'
 gem 'execjs'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 gem 'pry'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -46,6 +51,7 @@ gem "jbuilder"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
+gem 'sass-rails'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -67,6 +73,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # gem "log_formatter", '~> 0.8.2'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -81,3 +88,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+# group :production do
+# gem 'pg', '1.3.5'
+# gem 'aws-sdk-s3', '1.46.0', require: false
+# end
