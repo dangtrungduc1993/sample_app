@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+  get 'password_resets/edit'
   get 'sessions/new'
   resources :admins
   resources :users
@@ -24,5 +26,8 @@ Rails.application.routes.draw do
   
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :password_resets, only: [:new, :create, :edit, :update]
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development? 
   
 end

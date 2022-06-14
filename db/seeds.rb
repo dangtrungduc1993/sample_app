@@ -8,8 +8,8 @@
 
 
   # Create a main sample user.
-  User.create!(name: "Ducdt",
-  email: "ducdt@nal.vn",
+  User.create!(name: "abc",
+  email: "abc@nal.vn",
   password: "121212",
   password_confirmation: "121212",
   admin: true,

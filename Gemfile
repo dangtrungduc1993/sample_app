@@ -21,6 +21,10 @@ gem 'execjs'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+
+gem 'letter_opener'
+gem 'letter_opener_web'
+
 gem 'pry'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
